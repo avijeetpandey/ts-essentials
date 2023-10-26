@@ -44,3 +44,17 @@ type AppUser = {
 };
 
 type AppAdmin = Admin & AppUser; // union of two types
+
+// the same can be achieved using union as well
+interface IUser {
+  name: string;
+  id: number | string;
+  hobbies: Array<string>;
+}
+
+interface IDashBoardUser {
+  roles: Array<string>;
+}
+
+// union using interfaces
+interface IAdminUser extends IUser, IDashBoardUser {}
