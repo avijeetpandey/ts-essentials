@@ -33,3 +33,14 @@ function login(creds: Credentials) {
 }
 
 login(new AuthCredentials());
+
+// union of two types
+type Admin = {
+  permissions: string[];
+};
+
+type AppUser = {
+  userName: string;
+};
+
+type AppAdmin = Admin & AppUser; // union of two types
