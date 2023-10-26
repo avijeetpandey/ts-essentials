@@ -3,5 +3,12 @@
   "version": "1.0.0",
   "main": "index.ts",
   "author": "Avijeet",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "build": "rm -rf dist && yarn tsc",
+    "clear": "rm -rf dist"
+  },
+  "devDependencies": {
+    "typescript": "^5.2.2"
+  }
 }
